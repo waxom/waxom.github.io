@@ -18,8 +18,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">	<link rel="stylesheet" href="css/reset.css">
+ 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet/less" href="css/main.less">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 	<script src="js/less.min.js"></script>
 <body>
 	<header class="main-head showcase">
@@ -29,7 +32,7 @@
 					<img src="img/logoWaxon.png" class="logotype">
 				</a>
 				<nav class="navigation-menu">
-					<ul class="navigation-list">
+					<ul class="navigation-list" id="resp">
 						<li class="menu__item"><a href="#">Home</a></li>
 						<li class="menu__item"><a href="#">About Us</a></li>
 						<li class="menu__item"><a href="#">Portfolio</a></li>
@@ -38,34 +41,48 @@
 						<li class="menu__item"><a href="#">Pricing</a></li>
 						<li class="menu__item"><a href="#">Shortcodes</a></li>
 						<li class="menu__item"><a href="#">Contact</a></li>
+						<!-- <li class="menu__item search"><i class="fas fa-search"></i></li> -->
 					</ul> 
 				</nav>
+				<div class="menu-icon-responsive">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+
 			</div>
 		</div>
 	</header>
+	<!-- </div> -->
 	<section>
 		<div class="wrapper">
 			<div class="services-block">
-				<div class="web-app-design">
-					<i class="fa fa-pencil pencil-less fa-3x" aria-hidden="true"></i>
-					<h2>Web &amp; App Design</h2>
-					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-				</div>
-					<div class="development">
+				<a href="#">
+					<span class="web-app-design">
+						<i class="fas fa-pencil-alt pencil-less fa-3x"></i>
+						<h2>Web &amp; App Design</h2>
+						<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+					</span>
+				</a>
+				<a href="#">
+					<span class="development">
 						<i class="fa fa-tasks tasks-less fa-3x" aria-hidden="true"></i>
-					<h2>Development</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officia nulla quia itaque, quos eos!</p>
-					</div>
-				<div class="customization">
-					<i class="fa fa-cog cog-less fa-3x" aria-hidden="true"></i>
-					<h2>Customization</h2>
-					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-				</div>
-				<div class="marketing">
-					<i class="fa fa-briefcase case-less fa-3x" aria-hidden="true"></i>
-					<h2>Marketing</h2>
-					<p>LNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
- 				</div>
+						<h2>Development</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officia nulla quia itaque, quos eos!</p>
+					</span>
+				</a>
+				<a href="#">
+					<span class="customization">
+						<i class="fa fa-cog cog-less fa-3x" aria-hidden="true"></i>
+						<h2>Customization</h2>
+						<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+					</span>
+				</a>
+				<a href="#">
+					<span class="marketing">
+						<i class="fa fa-briefcase case-less fa-3x" aria-hidden="true"></i>
+						<h2>Marketing</h2>
+						<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+	 				</span>
+ 				</a>
 			</div>
 		</div>
 	</section>
@@ -88,6 +105,7 @@
 						</span> 
 						Multipurpose WordPress Theme
 					</h1>
+
 					<p>
 						Don't Forget to Rate the Template. Thanks so much!
 					</p>
@@ -95,5 +113,18 @@
 			</div>
 		</div>
 	</section>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$(".owl-carousel").owlCarousel();
+  			singleItem: true;
+		});	
+	</script>
+	<script>
+    $('.menu-icon-responsive').click(function(){
+       $('#resp').fadeToggle();
+    });
+  </script>
 </body>
 </html>

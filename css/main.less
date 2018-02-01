@@ -2,8 +2,26 @@
 @main-font-montserrat: Montserrat, sans-serif;
 @main-font-raleway: Raleway, sans-serif;
 
+.menu-icon-responsive {
+	display: none;
+}
+
+@media screen and (max-width: 1000px){
+    #resp {
+        display: none;
+    }
+    .menu-icon-responsive {
+    	display: block;
+    	color: #fff;
+    	padding: 12px;
+    }
+    #resp li {
+        display: block;
+    }
+}
+
 .showcase {
-	background: url(../img/showcase/showcase-1.png) no-repeat center top;
+	background: url(../img/showcase/showcase-2.jpg) no-repeat center top;
 	background-size: cover;
 	margin: auto;
 	width: 100%;
@@ -20,11 +38,16 @@
 	justify-content: space-between;
 	padding: 30px;
 	.logotype {
+		justify-content: flex-start;	
 	}
 	.navigation-menu {
 		display: flex;
+		justify-content: flex-end;
 		.navigation-list {
 			display: flex;
+			a {
+				transition: color 0.4s linear;
+			}
 		}
 	}
 }
@@ -50,14 +73,25 @@
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding: 87px 32px;
+	padding: 60px 32px;
 	color: #fff;
 	flex-wrap: wrap;
+	a {
+		text-decoration: none;
+		display: inline-flex;
+		margin-top: 25px;
+		&:hover {
+			h2, .pencil-less, .cog-less, .tasks-less, .case-less {
+				color: #c7b299;
+			}
+		}
+	}
 	h2 {
 		font-family: @main-font-raleway;
 		color: #555555;
 		font-size: 22px;
 		font-weight: 400;
+		transition: color 0.4s linear;
 	}
 	p {
 		color: #8c8c8c;
@@ -68,33 +102,23 @@
 		padding-top: 19px;
 	}
 	.web-app-design, .development, .customization, .marketing {
-		cursor: pointer;
 		max-width: 266px;
-		&:hover {
-			h2 {
-				color: #c7b299;
-			}
-		}
-		.cog-less, .pencil-less, .tasks-less, .case-less {
+		.cog-less, .pencil-less, .tasks-less, .case-less, .search {
 			color: #000;
 			padding-bottom: 29px;
-			&:hover {
-				color: #c7b299;
-			}
+			transition: color 0.4s linear;
 		}
 	}
 }
 
 .realization {
 	text-align: center;
-
 	h2 {
 		font-family: @main-font-raleway;
 		font-size: 30px;
 		font-weight: 400;
 		color: #555555;
 	}
-	
 	p {
 		font-family: @main-font-montserrat;
 		font-size: 16px;
@@ -104,7 +128,6 @@
 		max-width: 727px;
 		padding: 35px 30px;
 	} 
-
 	img {
 		width: 100%;
 		margin: auto;
@@ -133,6 +156,11 @@
 		font-size: 18px;
 		font-weight: 300;
 		color: #615855;
+	}
+	.purchase-button {
+		display: flex;
+		justify-content: flex-end;
+		text-transform: uppercase;
 	}
 }
 
